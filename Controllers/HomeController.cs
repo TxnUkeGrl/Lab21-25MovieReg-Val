@@ -15,7 +15,17 @@ namespace Lab21MovieRegistration.Controllers
         public IActionResult MovieRegistration()
         {
             var model = new Movie();
+            model.ListGenre.Add(new SelectListItem("Action/Adventure", "Action/Adventure"));
+            model.ListGenre.Add(new SelectListItem("Animated", "Animated"));
+            model.ListGenre.Add(new SelectListItem("Children/Family", "Children/Family"));
+            model.ListGenre.Add(new SelectListItem("Comedy", "Comedy"));
+            model.ListGenre.Add(new SelectListItem("Drama", "Drama"));
+            model.ListGenre.Add(new SelectListItem("Fiction/Fantasy", "Fiction/Fantasy"));
             model.ListGenre.Add(new SelectListItem("Horror", "Horror"));
+            model.ListGenre.Add(new SelectListItem("Musical", "Musical"));
+            model.ListGenre.Add(new SelectListItem("Romance", "Romance"));
+            model.ListGenre.Add(new SelectListItem("Western", "Western"));
+            model.ListGenre.Add(new SelectListItem("Genre Not Listed", "Genre Not Listed"));
             return View(model);
         }
 
@@ -27,6 +37,7 @@ namespace Lab21MovieRegistration.Controllers
             }
             else
             {
+
                 return View("MovieRegistration", userMovie);
             }
         }
