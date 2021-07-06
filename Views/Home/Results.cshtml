@@ -1,0 +1,18 @@
+﻿<form method="get" asp-action="MovieRegistration" asp-controller="Home">
+    @model Movie
+    "@Model.Title" has been registered.
+    <br />
+    Title: @Model.Title
+    <br />
+    Genre: @Model.Genre
+    <br />
+    Year: @Model.Year
+    <br />
+    Actors: @Model.Actors
+    <br />
+    Directors: @Model.Directors
+    <br />
+    ID: @Model.ID
+    <br />
+    <input type="submit" value="New Movie" class="submit" />
+    </form>
